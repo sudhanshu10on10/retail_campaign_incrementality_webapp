@@ -109,7 +109,7 @@ retail-campaign-incrementality/
 
 ```bash
 # Clone the repo
-git clone https://github.com/sudhanshu10on10/retail_campaign_incrementality.git
+git clone https://github.com/sudhanshu10on10/retail_campaign_incrementality_webapp.git
 cd retail-campaign-incrementality
 
 # Install dependencies
