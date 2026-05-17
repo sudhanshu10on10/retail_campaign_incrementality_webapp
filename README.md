@@ -9,22 +9,22 @@
 ## The Business Problem
 
 When a company runs a promotional campaign, the instinctive question is:
-> *"Sales went up — did the campaign cause it?"*
+> *"Sales went up, did the campaign cause it?"*
 
-The honest answer is: **not necessarily.** Sales might have grown anyway due to seasonality, macro trends, or regional differences. This project isolates the **true causal lift** of a campaign — separating what the campaign actually caused from what would have happened regardless.
+The honest answer is: **not necessarily.** Sales might have grown anyway due to seasonality, macro trends, or regional differences. This project isolates the **true causal lift** of a campaign, separating what the campaign actually caused from what would have happened regardless.
 
 ---
 
 ## What It Does
 
-### 1. Campaign Lift — Difference-in-Differences (DiD)
+### 1. Campaign Lift - Difference-in-Differences (DiD)
 - Splits data into **Treatment regions** (East + West) and **Control regions** (Central + South)
 - Compares pre vs post campaign trends across both groups
 - Isolates true causal lift by removing the counterfactual trend
 - **Result:** $4,260 monthly causal lift (p = 0.02, statistically significant)
-- 95% CI entirely positive [$645, $7,876] — confirms real effect
+- 95% CI entirely positive [$645, $7,876] - confirms real effect
 
-### 2. Revenue Decomposition — Marketing Mix Modeling (MMM)
+### 2. Revenue Decomposition - Marketing Mix Modeling (MMM)
 - Builds a Ridge regression model on monthly aggregated data
 - Decomposes revenue variance by driver:
   - Order Value Effect
@@ -33,7 +33,7 @@ The honest answer is: **not necessarily.** Sales might have grown anyway due to 
   - Region Effect
 - Identifies that **order value drives 76%** of revenue variation
 
-### 3. Segment Response — RFM Segmentation
+### 3. Segment Response - RFM Segmentation
 - Scores customers on Recency, Frequency, and Monetary value
 - Assigns each customer to a segment: Champions, Loyal, At-Risk, Lost
 - Measures campaign lift **per segment** in treatment regions
@@ -45,13 +45,13 @@ The honest answer is: **not necessarily.** Sales might have grown anyway due to 
 
 | Segment | Pre-Campaign Avg ($) | Post-Campaign Avg ($) | Lift |
 |---|---|---|---|
-| Loyal | 244 | 262 | **+7.4%** ✅ |
+| Loyal | 244 | 262 | **+7.4%** |
 | Lost | 131 | 122 | -6.8% |
 | Champions | 280 | 248 | -11.4% |
 | At-Risk | 178 | 145 | -18.4% |
 
 **Business Recommendation:**
-> Reallocate campaign budget toward the **Loyal segment** — the only group showing positive incrementality. Champions show negative lift, meaning they buy regardless of the campaign, making spend on them inefficient. At-Risk customers require personalised interventions beyond broad promotional spend.
+> Reallocate campaign budget toward the **Loyal segment** - the only group showing positive incrementality. Champions show negative lift, meaning they buy regardless of the campaign, making spend on them inefficient. At-Risk customers require personalised interventions beyond broad promotional spend.
 
 ---
 
