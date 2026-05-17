@@ -144,4 +144,4 @@ streamlit run app.py
 ## Author
 
 **Sudhanshu Ayer** — Data Scientist  
-[GitHub](https://github.com/sudhanshu10on10) · [LinkedIn](#)
+[GitHub](https://github.com/sudhanshu10on10) · [LinkedIn](https://www.linkedin.com/in/sudhanshu-a-964734128/)
